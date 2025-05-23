@@ -56,3 +56,36 @@ Sale Cars es una plataforma web que permite explorar, analizar y visualizar info
    docker build -t mariavalencia30/salescarsv2-usuarios backend/usuarios_src
    docker push mariavalencia30/salescarsv2-usuarios
    # Repetir para cada microservicio y componente
+
+3.Iniciar Docker Swarm:
+docker swarm init --advertise-addr <IP_manager>
+
+4.Desplegar stack:
+docker stack deploy -c docker-compose.yml salescarsv2
+
+
+---
+
+## 🔐 Credenciales de Acceso al Panel de Administrador
+
+- **Email:** admisalecars@car.com  
+- **Nombre:** Maria V  
+- **Teléfono:** 123456789  
+- **Contraseña:** thebestcars  
+
+---
+
+## 📊 Acceso a Métricas y Paneles de Administración
+
+- **Estadísticas de HAProxy:**  
+  [http://192.168.119.138:8404/haproxy_stats](http://192.168.119.138:8404/haproxy_stats) *(ajustar según IP utilizada)*
+
+- **Interfaz de Apache Spark (Web UI):**  
+  [http://192.168.119.138:8081/](http://192.168.119.138:8081/) *(ajustar según IP utilizada)*
+
+---
+
+## 📁 Ruta de Trabajo del Proyecto en Servidor
+
+El proyecto debe estar ubicado en:  
+`/var/www/html/SalesCarsV2`
